@@ -89,7 +89,7 @@ $user = User::findOne(Yii::$app->user->id);
         <div class="widget-body">
             <div class="userinfo ">
                 <div class="avatar pull-left">
-                    <img src="<?= Url::to('@web/../upload/'.$user->avatar, true); ?>" class="img-responsive img-circle"> 
+                    <img src="<?= Url::to('@web/../upload/'.$user->avatar, true); ?>" class="img-responsive img-circle">
                 </div>
                 <div class="info">
                     <span class="username"><?= $user->username; ?></span>
@@ -103,7 +103,7 @@ $user = User::findOne(Yii::$app->user->id);
 
         <nav role="navigation" class="widget-body">
 
-            <?php 
+            <?php
 
             $route = Yii::$app->controller->getRoute();
 
@@ -113,39 +113,39 @@ $user = User::findOne(Yii::$app->user->id);
              //  'submenuOptions' => ['class' => 'acc-menu'],
                 'items' => [
                     [
-                        'label' => '<span class="icon"><i class="material-icons">home</i></span><span>Dashboard</span>', 
+                        'label' => '<span class="icon"><i class="material-icons">home</i></span><span>Dashboard</span>',
                         'url' => ['/site/index'],
                         'linkOptions' => ['class' => 'withripple']
-                    ],                    
+                    ],
                     [
-                        'label' => '<span class="icon"><i class="material-icons">widgets</i></span><span>Projects</span>', 
+                        'label' => '<span class="icon"><i class="material-icons">widgets</i></span><span>Projects</span>',
                         'url' => ['/projects/index'],
                         'active' => in_array($route, ['projects/view', 'projects/index', 'projects/create', 'projects/update']),
                         'linkOptions' => ['class' => 'withripple']
                     ],
                     [
-                        'label' => '<span class="icon"><i class="material-icons">view_comfy</i></span><span>Project Tasks</span>', 
+                        'label' => '<span class="icon"><i class="material-icons">view_comfy</i></span><span>Project Tasks</span>',
                         'linkOptions' => ['class' => 'withripple'],
                         'active' => in_array($route, ['project_tasks/view', 'project_tasks/index', 'project_tasks/create', 'project_tasks/update']),
                         'url' => ['/project_tasks/index']
                     ],
                     [
-                        'label' => '<span class="icon"><i class="material-icons">public</i></span><span>Marketing</span>', 
+                        'label' => '<span class="icon"><i class="material-icons">public</i></span><span>Marketing</span>',
                         'linkOptions' => ['class' => 'hasChild withripple'],
                         'active' => in_array($route, ['lead/view', 'lead/index', 'lead/create', 'lead/update', 'customer/view', 'customer/index', 'customer/create', 'customer/update']),
                         'items' => [
                             ['label' => 'Customer', 'url' => ['/customer/index']],
                             ['label' => 'Lead', 'url' => ['/lead/index']],
-                        ]    
+                        ]
                     ],
                     [
-                        'label' => '<span class="icon"><i class="material-icons">vpn_key</i></span><span>Password</span>', 
+                        'label' => '<span class="icon"><i class="material-icons">vpn_key</i></span><span>Password</span>',
                         'url' => ['/password'],
                         'active' => in_array($route, ['password/index', 'password/view', 'password/create', 'password/update']),
                         'linkOptions' => ['class' => 'withripple']
                     ],
                     [
-                        'label' => '<span class="icon"><i class="material-icons">note</i></span><span>Note</span>', 
+                        'label' => '<span class="icon"><i class="material-icons">note</i></span><span>Note</span>',
                         'url' => ['/note'],
                         'active' => in_array($route, ['note/view', 'note/index', 'note/create', 'note/update']),
                         'linkOptions' => ['class' => 'withripple']
@@ -153,7 +153,7 @@ $user = User::findOne(Yii::$app->user->id);
                 ],
             ]);
 
-            ?>    
+            ?>
         </nav>
 
         </div>
@@ -187,4 +187,3 @@ $user = User::findOne(Yii::$app->user->id);
 </body>
 </html>
 <?php $this->endPage() ?>
-

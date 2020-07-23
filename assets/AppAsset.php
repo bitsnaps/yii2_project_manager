@@ -27,8 +27,8 @@ class AppAsset extends AssetBundle
         'plugins/progress-skylo/skylo.css',
         'js/datetimepicker/css/bootstrap-datetimepicker.min.css',
     ];
-           
-    public $js = [   
+
+    public $js = [
         'plugins/nanoScroller/js/jquery.nanoscroller.min.js',
         'js/enquire.min.js',
         'plugins/velocityjs/velocity.min.js',
